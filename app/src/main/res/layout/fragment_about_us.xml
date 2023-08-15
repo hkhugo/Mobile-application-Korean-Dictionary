@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="SEHH3165\n Mobiles App Development\n Group 7"
+            android:textAllCaps="false"
+            android:textColor="#5C48CA"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            android:gravity="center_horizontal"
+            android:text="MA Siu Tong Jackie (19080702A)-Leader\nCHAU Yee Lee(19107638A)\nLAW Lai Yin(19036870A)\nLEUNG Wai Kiu(19194270A)\nWONG Chung Wing(19026863A)\nWONG Wa Wong(19022422A)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

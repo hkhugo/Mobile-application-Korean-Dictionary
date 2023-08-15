@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Learning Korean</string>
+    <string-array name="category">
+        <item>Bank</item>
+        <item>Basic</item>
+        <item>Bus</item>
+        <item>Cafe</item>
+        <item>Common</item>
+        <item>Dating</item>
+        <item>Dentist</item>
+        <item>Dinner</item>
+        <item>Direction</item>
+        <item>Dry Cleaner</item>
+        <item>Emergency</item>
+        <item>Exclamations</item>
+        <item>Hair Salon</item>
+        <item>Hospital</item>
+        <item>Hotel</item>
+        <item>Meeting</item>
+        <item>Movie</item>
+        <item>Pharmacy</item>
+        <item>Post Office</item>
+        <item>Restaurant</item>
+        <item>Shopping</item>
+        <item>Taxi</item>
+    </string-array>
+</resources>

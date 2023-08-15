@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchingGameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#003399"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Score: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.74"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="60s"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pronunciation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="Pronunciation" />
+
+            <RelativeLayout
+                android:id="@+id/fab_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:visibility="visible"
+                    app:srcCompat="@android:drawable/ic_media_pause" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8FCDDC39">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_play"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="Start"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="50sp"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="How to Play"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_play"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50sp"
+                android:gravity="center_horizontal"
+                android:text="In 60 seconds, match the top english phrase\nwith the bottom korean phrase by drag and drop.\nTry to match as much as you can.\nYou will get 10 marks for each correct answer.\nGOOD LUCK!!!"
+                android:textColor="#6633FF"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_wm_times_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/time_up" />
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_play"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="50sp"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="Exit"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_exit"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="restart"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_exit"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_corner_phrase_btn"
+                android:text="Resume"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_questionNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:text="Question - "
+                android:textColor="#21292B"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_english"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_questionNum"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner_en"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_english"
+                android:layout_centerHorizontal="true"
+                android:height="80dp"
+                android:background="@drawable/border_for_game"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Drag Your Answer Here"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/iv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                app:srcCompat="@drawable/matching_game_title" />
+
+            <ImageView
+                android:id="@+id/iv_correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/correct" />
+
+            <ImageView
+                android:id="@+id/iv_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/wrong" />
+
+            <TextView
+                android:id="@+id/tv_korean3"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_corner_kr"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_korean2"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_korean3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner_kr"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_korean1"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_korean2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner_kr"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
